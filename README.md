@@ -1,6 +1,6 @@
 # Remix Satanic Disco Stack
 
-![The Remix Satanic Disco Stack](https://www.google.com/url?sa=i&url=https%3A%2F%2Fopen.spotify.com%2Falbum%2F16NoDzPz1qIvrexZ0Ou72C&psig=AOvVaw2MN6iYN8T_gGvZIAN7pDwy&ust=1648395933952000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCKih18eP5PYCFQAAAAAdAAAAABAD)
+![The Remix Satanic Disco Stack](https://github.com/nyoung697/satanic-disco-stack/blob/main/app/assets/nick-fewings-9P1pZy3gwxg-unsplash.jpg?raw=true)
 
 Learn more about [Remix Stacks](https://remix.run/stacks).
 
