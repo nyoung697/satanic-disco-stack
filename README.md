@@ -1,11 +1,11 @@
-# Remix Blues Stack
+# Remix Satanic Disco Stack
 
-![The Remix Blues Stack](https://repository-images.githubusercontent.com/461012689/37d5bd8b-fa9c-4ab0-893c-f0a199d5012d)
+![The Remix Satanic Disco Stack](https://www.google.com/url?sa=i&url=https%3A%2F%2Fopen.spotify.com%2Falbum%2F16NoDzPz1qIvrexZ0Ou72C&psig=AOvVaw2MN6iYN8T_gGvZIAN7pDwy&ust=1648395933952000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCKih18eP5PYCFQAAAAAdAAAAABAD)
 
 Learn more about [Remix Stacks](https://remix.run/stacks).
 
 ```
-npx create-remix --template remix-run/blues-stack
+npx create-remix --template nyoung697/satanic-disco-stack
 ```
 
 ## What's in the stack

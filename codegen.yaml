@@ -1,0 +1,10 @@
+schema: "http://localhost:8080/v1/graphql"
+documents: "./app/**/*.{ts,tsx}"
+overwrite: true
+config:
+  skipTypename: true
+generates:
+  app/types/hasuragenerated.d.ts:
+    plugins:
+      - typescript
+      - typescript-operations
