@@ -20,13 +20,7 @@ export const sessionStorage = createCookieSessionStorage({
 
 const USER_SESSION_KEY = "userId";
 
-export async function verifyLogin({
-  username,
-  password,
-}: {
-  username: string;
-  password: string;
-}) {
+export async function verifyLogin(username: string, password: string) {
   const user = await getUserByUsername(username);
   if (!user) return null;
   const isCorrectPassword = await bcrypt.compare(password, user.password_hash);
