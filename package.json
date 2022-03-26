@@ -21,7 +21,7 @@
     "generate:gql": "GRAPHQL_ADMIN_SECRET=$(grep GRAPHQL_ADMIN_SECRET .env | cut -d '=' -f2) graphql-codegen",
     "postinstall": "remix setup node",
     "lint": "eslint --cache --cache-location ./node_modules/.cache/eslint .",
-    "setup": "cd ./hasura && hasura metadata apply --endpoint http://localhost:8080 && hasura migrate apply --all-databases --endpoint http://localhost:8080 && hasura metadata reload --endpoint http://localhost:8080",
+    "setup": "cd ./hasura && hasura metadata apply --endpoint http://localhost:8080 --admin-secret myadminsecretkey && hasura migrate apply --all-databases --endpoint http://localhost:8080 --admin-secret myadminsecretkey && hasura metadata reload --endpoint http://localhost:8080 --admin-secret myadminsecretkey",
     "start": "cross-env NODE_ENV=production node ./build/server.js",
     "start:mocks": "cross-env NODE_ENV=production node --require ./mocks --require dotenv/config ./build/server.js",
     "test": "vitest",

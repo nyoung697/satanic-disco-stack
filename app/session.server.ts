@@ -1,6 +1,7 @@
+import bcrypt from "bcryptjs";
 import { createCookieSessionStorage, redirect } from "remix";
 import invariant from "tiny-invariant";
-import { getUserById } from "~/hasura.server";
+import { getUserById, getUserByUsername } from "~/hasura.server";
 import { GetUserByIdQuery } from "./types/hasuragenerated";
 
 invariant(process.env.SESSION_SECRET, "SESSION_SECRET must be set");
@@ -18,6 +19,20 @@ export const sessionStorage = createCookieSessionStorage({
 });
 
 const USER_SESSION_KEY = "userId";
+
+export async function verifyLogin({
+  username,
+  password,
+}: {
+  username: string;
+  password: string;
+}) {
+  const user = await getUserByUsername(username);
+  if (!user) return null;
+  const isCorrectPassword = await bcrypt.compare(password, user.password_hash);
+  if (!isCorrectPassword) return null;
+  return user;
+}
 
 export async function getSession(request: Request) {
   const cookie = request.headers.get("Cookie");
